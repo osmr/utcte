@@ -12,7 +12,7 @@ python mnist/MXNet/train.py
 Any training script usually creates a project subdirectory in the working director with all 
 working files. One of them is a `*_score.log` file with tabulated learning curves. You can visualize 
 this curves by using R-script `utct/common/observe.R`. This script starts a web-server and has two 
-argumats:
+arguments:
 - the path to `score_ref.csv` file (this file is in the working directory),
 - port for web-server (the defalut value is 6006).
 After starting this script you can see curve plots in your web-browser by the address 
