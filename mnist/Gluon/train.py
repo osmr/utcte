@@ -34,7 +34,8 @@ def main():
         data_source,
         task_name="mnist",
         suffix="_gl")
-    ctx = [mx.gpu(i) for i in cfg.prm['gpus']] if cfg.prm['gpus'] else mx.cpu()
+    #ctx = [mx.gpu(i) for i in cfg.prm['gpus']] if cfg.prm['gpus'] else mx.cpu()
+    ctx = mx.gpu(0) if cfg.prm['gpus'] else mx.cpu()
 
     trainer = Trainer(
         model=model,

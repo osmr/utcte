@@ -44,8 +44,8 @@ class MnistDataSource(MnistDataSourceTemplate):
             data_h5_path=self.params['data_h5_path']).get_data()
         self.train_img = self._to4d(self.train_img)
         self.val_img = self._to4d(self.val_img)
-        #self.train_lbl = self.train_lbl.astype(np.long)
-        #self.val_lbl = self.val_lbl.astype(np.long)
+        self.train_lbl = self.train_lbl.astype(np.int32)
+        self.val_lbl = self.val_lbl.astype(np.int32)
         self.data_loaded = True
 
     def _to4d(self, img):
